@@ -23,7 +23,6 @@
     "@types/bcrypt": "^5.0.0",
     "bcrypt": "^5.1.0",
     "fastify": "^4.10.2",
-    "short-unique-id": "^4.4.4",
     "zod": "^3.19.1"
   }
 }
