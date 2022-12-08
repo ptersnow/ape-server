@@ -1,4 +1,4 @@
-import Fastify from 'fastify'
+import { FastifyInstance } from "fastify"
 import cors from '@fastify/cors'
 import jwt from '@fastify/jwt'
 
@@ -10,11 +10,7 @@ import { questionRoutes } from './routes/questions'
 import { sidewalkRoutes } from './routes/sidewalks'
 
 
-export default async function bootstrap() {
-    const fastify = Fastify({
-        logger: true
-    })
-
+export default async function bootstrap(fastify: FastifyInstance) {
     await fastify.register(cors, {
         origin: true
     })
