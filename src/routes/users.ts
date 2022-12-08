@@ -7,6 +7,13 @@ import bcrypt from "bcrypt"
 
 export async function userRoutes (fastify: FastifyInstance) {
 
+    fastify.get('/', async (request, reply) => {
+        
+        const users = await prisma.user.findMany()
+
+        return reply.status(200).send({ users })
+    })
+
     fastify.post('/users/login', async (request, reply) => {
         const postUserBody = z.object({
             email: z.string(),
