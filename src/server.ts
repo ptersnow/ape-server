@@ -10,7 +10,7 @@ import { questionRoutes } from './routes/questions'
 import { sidewalkRoutes } from './routes/sidewalks'
 
 
-async function bootstrap() {
+export default async function bootstrap() {
     const fastify = Fastify({
         logger: true
     })
@@ -32,5 +32,3 @@ async function bootstrap() {
 
     //await fastify.listen({ port: 3333, host: '0.0.0.0' })
 }
-
-bootstrap()
